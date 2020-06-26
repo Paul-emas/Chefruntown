@@ -26,6 +26,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -54,9 +55,19 @@ a:focus {
   }
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .sec-padding {
     padding: 5rem 0;
+  }
+}
+
+.sec-padding-small {
+  padding: 5rem 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .sec-padding-small {
+    padding: 3rem 0;
   }
 }
 
@@ -89,11 +100,23 @@ a:focus {
   font-size: 3rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .header_navbar .logo {
+    font-size: 2.8rem;
+  }
+}
+
 .header_navbar .top-link {
   color: #fff;
   font-size: 1.6rem;
   margin-top: .5rem;
   text-transform: capitalize;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header_navbar .top-link {
+    font-size: 1.4rem;
+  }
 }
 
 .header_navbar .top-link ion-icon {
@@ -125,6 +148,27 @@ a:focus {
   color: #120C24;
 }
 
+.header .banner .caption-text-h {
+  font-size: 7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  top: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .banner .caption-text {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner .caption-text {
+    font-size: 6rem;
+  }
+}
+
 .header .banner-blog {
   background-image: url(../img/banner-blog.jpg);
   background-size: cover;
@@ -146,6 +190,21 @@ a:focus {
   background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header .banner-blog::before {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner-blog::before {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: -3rem;
+  }
+}
+
 .header .banner-blog::after {
   content: '';
   position: absolute;
@@ -158,6 +217,21 @@ a:focus {
   background-size: 100%;
   background-image: url(../img/blog/bg-1.png);
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .banner-blog::after {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner-blog::after {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    bottom: -10rem;
+  }
 }
 
 .sec-tab {
@@ -193,13 +267,176 @@ a:focus {
 }
 
 .sec-tab ul li a {
-  color: #000 !important;
+  color: #100b2d !important;
   font-size: 1.6rem;
   padding: 1rem 2rem !important;
   background: none !important;
   -webkit-transition: all .3s;
   transition: all .3s;
   border-bottom: 2px solid transparent;
+}
+
+.banner-home {
+  background-image: url(../img/banner-home.png);
+  background-repeat: no-repeat;
+  background-position: left -5rem;
+  background-size: 100%;
+  height: 75rem !important;
+}
+
+.banner-home .banner-content {
+  position: relative;
+  margin-top: 25%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  outline: none;
+}
+
+.banner-home .label {
+  text-align: center;
+  font-family: 'Open sans';
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.banner-home .search-box {
+  outline: 1px solid #100b2d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.banner-home .search-box table {
+  position: absolute;
+  top: 6.5rem;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.banner-home .search-box table th, .banner-home .search-box table td {
+  font-size: 1.6rem;
+  padding: 2rem;
+  background-color: #f7f4f4;
+  cursor: pointer;
+}
+
+.banner-home .search-box table th:hover, .banner-home .search-box table td:hover {
+  background-color: #8db500;
+  color: #fff;
+}
+
+.banner-home .search-box .icon {
+  width: 10%;
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  color: #100b2d;
+}
+
+.banner-home .search-box form {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-home .search-box form span {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.banner-home .search-box form .search-input {
+  padding: 1.7rem;
+  width: 100%;
+  outline: none;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.banner-home .search-box button {
+  width: 30%;
+  background-color: #8db500;
+  color: #fff;
+  font-size: 2rem;
+  outline: none;
+  border: 5px solid #8db500;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.banner .container {
+  height: 100%;
+}
+
+.footer-container {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 212, 212, 0.3))), url(../img/fb.png);
+  background-image: linear-gradient(rgba(212, 212, 212, 0.3)), url(../img/fb.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer .logo {
+  font-size: 4rem;
+  color: #8db500;
+  margin-bottom: 1rem;
+  font-family: 'Dancing Script';
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul:first-child {
+  margin-top: 1rem;
+}
+
+.footer .row ul li {
+  list-style: none;
+  display: inline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .row ul li a {
+  color: #100b2d;
+  font-size: 1.6rem;
+  padding: .7rem 1rem;
+}
+
+.footer-caption {
+  font-size: 1.5rem;
+  color: #100b2d;
+  font-family: 'Open sans';
+}
+
+.footer .food-caption {
+  color: #100b2d;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+
+.footer .line {
+  background-color: #100b2d;
+}
+
+.footer .col-lg-4 p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+}
+
+.footer .copyright {
+  width: 100%;
+  padding: 2.5rem;
+  background-color: #8db500;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .section-blog .row .col-lg-6 {
@@ -214,7 +451,7 @@ a:focus {
 
 @media only screen and (max-width: 56.25em) {
   .section-blog .row .col-lg-6 figure {
-    height: 22rem;
+    height: auto;
   }
 }
 
@@ -244,9 +481,8 @@ a:focus {
 .section-blog .row .col-lg-6 .title {
   font-size: 2.5rem;
   text-transform: uppercase;
-  font-weight: 0 !important;
-  color: #000;
-  font-family: 'Josefin Sans';
+  font-weight: 600 !important;
+  color: #100b2d;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -256,8 +492,8 @@ a:focus {
 }
 
 .section-blog .row .col-lg-6 .text {
-  font-size: 1.35rem;
-  color: #000;
+  font-size: 1.5rem;
+  color: #100b2d;
   line-height: 1.7;
   text-align: left;
 }

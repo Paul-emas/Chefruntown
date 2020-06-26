@@ -5,7 +5,16 @@
         padding: 8rem 0;
     }
 
-    @include respond(tab-port) {
+    @include respond(phone) {
         padding: 5rem 0;
+    }
+}
+
+.sec-padding-small {
+    padding: 5rem 0;
+
+
+    @include respond(phone) {
+        padding: 3rem 0;
     }
 }

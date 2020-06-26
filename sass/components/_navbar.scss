@@ -21,6 +21,10 @@
             color: $color-white;
             align-self: center;
             font-size: 3rem;
+
+            @include respond(phone) {
+                font-size: 2.8rem;
+            }
         }
     
         & .top-link {
@@ -28,6 +32,10 @@
             font-size: 1.6rem;
             margin-top: .5rem;
             text-transform: capitalize;
+
+            @include respond(phone) {
+                font-size: 1.4rem;
+            }
     
             & ion-icon {
                 font-size: 2rem;
@@ -54,6 +62,22 @@
             transform: translateY(-50%);
             font-size: 12rem;
             color: #120C24;
+
+            &-h {
+                font-size: 7rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                top: 0;
+                transform: none;
+            }
+
+            @include respond(tab-port) {
+                font-size: 8rem;
+            }
+
+            @include respond(phone) {
+                font-size: 6rem;
+            }
         }
 
         &-blog {
@@ -73,6 +97,15 @@
                 background-size: 100%;
                 background-image: url(../img/blog/bg-0.png);
                 background-repeat: no-repeat;
+
+                @include respond(tab-port) {
+                    transform: scale(1);
+                }
+
+                @include respond(phone) {
+                    transform: scale(.6);
+                    top: -3rem;
+                }
             }
 
             &::after {
@@ -86,6 +119,15 @@
                 background-size: 100%;
                 background-image: url(../img/blog/bg-1.png);
                 background-repeat: no-repeat;
+
+                @include respond(tab-port) {
+                    transform: scale(1.05);
+                }
+
+                @include respond(phone) {
+                    transform: scale(.6);
+                    bottom: -10rem;
+                }
             }
         }
     }

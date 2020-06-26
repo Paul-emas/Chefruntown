@@ -1,8 +1,4 @@
 /* Don't forget to include a CSS reset file otherwise it might look a little bit strange*/
-a:active,a:focus {
-	outline: expression(hideFocus='true');
-}
-
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
@@ -21,7 +17,6 @@ a:active,a:focus {
 
 #tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
 	display: block;
-	padding: 17px 30px;
 	background: #544f6b;
 	text-decoration: none;
 	color: #8478B3;
