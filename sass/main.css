@@ -276,6 +276,12 @@ a:focus {
   border-bottom: 2px solid transparent;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .sec-tab ul li a {
+    padding: 0 !important;
+  }
+}
+
 .banner-home {
   background-image: url(../img/banner-home.png);
   background-repeat: no-repeat;
@@ -307,22 +313,31 @@ a:focus {
   position: relative;
 }
 
-.banner-home .search-box table {
+.banner-home .search-box .table {
   position: absolute;
   top: 6.5rem;
   border-collapse: collapse;
   border: 1px solid #ddd;
+  background-color: #f7f4f4;
+  overflow-y: visible;
+  overflow-x: hidden;
+  width: 100%;
+  height: 32rem;
+  display: none;
+}
+
+.banner-home .search-box .table table {
   width: 100%;
 }
 
-.banner-home .search-box table th, .banner-home .search-box table td {
+.banner-home .search-box .table th, .banner-home .search-box .table td {
   font-size: 1.6rem;
   padding: 2rem;
   background-color: #f7f4f4;
   cursor: pointer;
 }
 
-.banner-home .search-box table th:hover, .banner-home .search-box table td:hover {
+.banner-home .search-box .table th:hover, .banner-home .search-box .table td:hover {
   background-color: #8db500;
   color: #fff;
 }
@@ -369,6 +384,20 @@ a:focus {
 
 .banner .container {
   height: 100%;
+}
+
+.display {
+  display: block !important;
+  visibility: visible;
+}
+
+.svg {
+  position: absolute;
+  z-index: 5;
+  top: 15rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
 }
 
 .footer-container {
