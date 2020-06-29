@@ -26,22 +26,10 @@
                 display: inline;
                 justify-content: space-around;
 
-                @include respond(tab-port) {
-                    width: 50%;
-                    float: left;
-                    left: 0;
-                    margin-bottom: 1.5rem;
-                }
-
                 & a {
                     color: $color-black;
                     font-size: 1.6rem;
                     padding: .7rem 1rem;
-
-                    @include respond(tab-port) {
-                        text-align: left;
-                        padding: 0;
-                    }
                 }
             }
         }

@@ -18,3 +18,26 @@
         padding: 3rem 0;
     }
 }
+
+.sec-heading {
+    text-align: center;
+
+    & .restaurant-outline {
+        font-size: 6rem;
+        color: $color-primary;
+        margin-bottom: 1rem;
+    }
+
+    & p {
+        font-size: 3rem;
+        color: $color-primary;
+        font-family: 'Dancing Script';
+        margin-bottom: 2rem;
+    }
+
+    & h1 {
+        font-size: 5rem;
+        color: $color-black;
+        text-transform: uppercase;
+    }
+}
