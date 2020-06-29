@@ -486,10 +486,26 @@ a:focus {
       justify-content: space-around;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .footer .row ul li {
+    width: 50%;
+    float: left;
+    left: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .footer .row ul li a {
   color: #100b2d;
   font-size: 1.6rem;
   padding: .7rem 1rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer .row ul li a {
+    text-align: left;
+    padding: 0;
+  }
 }
 
 .footer-caption {
