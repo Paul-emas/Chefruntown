@@ -1,0 +1,586 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  overflow-x: hidden !important;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+a,
+a:visited,
+a:focus {
+  text-decoration: none !important;
+}
+
+.sec-padding {
+  padding: 10rem 0;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .sec-padding {
+    padding: 8rem 0;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .sec-padding {
+    padding: 5rem 0;
+  }
+}
+
+.sec-padding-small {
+  padding: 5rem 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .sec-padding-small {
+    padding: 3rem 0;
+  }
+}
+
+.header_navbar {
+  height: 7rem;
+  background-color: #8db500;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header_navbar .navbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header_navbar .logo {
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header_navbar .logo {
+    font-size: 2.8rem;
+  }
+}
+
+.header_navbar .top-link {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: .5rem;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header_navbar .top-link {
+    font-size: 1.4rem;
+  }
+}
+
+.header_navbar .top-link ion-icon {
+  font-size: 2rem;
+  position: relative;
+  top: .3rem;
+}
+
+.header .banner {
+  height: 52rem;
+  margin-top: 7rem;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner {
+    height: 30rem;
+  }
+}
+
+.header .banner .caption-text {
+  text-align: center;
+  position: relative;
+  top: 45%;
+  font-weight: 300;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12rem;
+  color: #120C24;
+}
+
+.header .banner .caption-text-h {
+  font-size: 7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  top: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .banner .caption-text-h {
+    font-size: 6rem !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner .caption-text-h {
+    font-size: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .banner .caption-text {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner .caption-text {
+    font-size: 6rem;
+  }
+}
+
+.header .banner-blog {
+  background-image: url(https://res.cloudinary.com/dnjoewu0k/image/upload/v1593433758/Chefruntown/banner-blog_cbasbn.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.header .banner-blog::before {
+  content: '';
+  position: absolute;
+  top: 3rem;
+  left: -11.5rem;
+  width: 25rem;
+  height: 25rem;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-size: 100%;
+  background-image: url(../img/blog/bg-0.png);
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .banner-blog::before {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner-blog::before {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    top: -3rem;
+  }
+}
+
+.header .banner-blog::after {
+  content: '';
+  position: absolute;
+  bottom: -6rem;
+  right: -11.5rem;
+  width: 25rem;
+  height: 25rem;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-size: 100%;
+  background-image: url(../img/blog/bg-1.png);
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .banner-blog::after {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header .banner-blog::after {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    bottom: -10rem;
+  }
+}
+
+.sec-tab {
+  width: 100% !important;
+}
+
+.sec-tab #tabs_container {
+  overflow: visible !important;
+}
+
+.sec-tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .sec-tab ul {
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+
+.sec-tab ul li {
+  list-style: none;
+}
+
+.sec-tab ul li .tabulous_active {
+  border-bottom: 2px solid #8db500;
+}
+
+.sec-tab ul li a {
+  color: #100b2d !important;
+  font-size: 1.6rem;
+  padding: 1rem 2rem !important;
+  background: none !important;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-bottom: 2px solid transparent;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .sec-tab ul li a {
+    padding: 0 !important;
+  }
+}
+
+.banner-home {
+  background-image: url(https://res.cloudinary.com/dnjoewu0k/image/upload/v1593433767/Chefruntown/banner-home_wdvbls.png);
+  background-repeat: no-repeat;
+  background-position: left -5rem;
+  background-size: 100%;
+  height: 75rem !important;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .banner-home {
+    background-size: cover;
+    height: 45rem !important;
+    background-position: top center !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .banner-home {
+    height: 35rem;
+  }
+}
+
+.banner-home .banner-content {
+  position: relative;
+  margin-top: 25%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  outline: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .banner-home .banner-content {
+    margin-top: 30%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .banner-home .banner-content {
+    margin-top: 18rem;
+  }
+}
+
+.banner-home .label {
+  text-align: center;
+  font-family: 'Open sans';
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.banner-home .search-box {
+  outline: 1px solid #100b2d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.banner-home .search-box .table {
+  position: absolute;
+  top: 6.5rem;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #f7f4f4;
+  overflow-y: visible;
+  overflow-x: hidden;
+  width: 100%;
+  height: 32rem;
+  display: none;
+}
+
+.banner-home .search-box .table table {
+  width: 100%;
+}
+
+.banner-home .search-box .table th, .banner-home .search-box .table td {
+  font-size: 1.6rem;
+  padding: 2rem;
+  background-color: #f7f4f4;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .banner-home .search-box .table th, .banner-home .search-box .table td {
+    padding: 1.5rem;
+  }
+}
+
+.banner-home .search-box .table th:hover, .banner-home .search-box .table td:hover {
+  background-color: #8db500;
+  color: #fff;
+}
+
+.banner-home .search-box .icon {
+  width: 10%;
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  color: #100b2d;
+  margin-left: .5rem;
+}
+
+.banner-home .search-box form {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-home .search-box form span {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.banner-home .search-box form .search-input {
+  padding: 1.7rem;
+  width: 100%;
+  outline: none;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .banner-home .search-box form .search-input {
+    padding: 1.5rem;
+  }
+}
+
+.banner-home .search-box button {
+  width: 30%;
+  background-color: #8db500;
+  color: #fff;
+  font-size: 2rem;
+  outline: none;
+  border: 5px solid #8db500;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .banner-home .search-box button {
+    font-size: 1.7rem;
+  }
+}
+
+.banner .container {
+  height: 100%;
+}
+
+.display {
+  display: block !important;
+  visibility: visible;
+}
+
+.svg {
+  position: absolute;
+  z-index: 5;
+  top: 15rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+}
+
+.footer-container {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 212, 212, 0.3))), url(../img/fb.png);
+  background-image: linear-gradient(rgba(212, 212, 212, 0.3)), url(../img/fb.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer .logo {
+  font-size: 4rem;
+  color: #8db500;
+  margin-bottom: 1rem;
+  font-family: 'Dancing Script';
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul:first-child {
+  margin-top: 1rem;
+}
+
+.footer .row ul li {
+  list-style: none;
+  display: inline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .row ul li a {
+  color: #100b2d;
+  font-size: 1.6rem;
+  padding: .7rem 1rem;
+}
+
+.footer-caption {
+  font-size: 1.5rem;
+  color: #100b2d;
+  font-family: 'Open sans';
+}
+
+.footer .food-caption {
+  color: #100b2d;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+
+.footer .line {
+  background-color: #100b2d;
+}
+
+.footer .col-lg-4 p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+}
+
+.footer .copyright {
+  width: 100%;
+  padding: 2.5rem;
+  background-color: #8db500;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.section-blog .row .col-lg-6 {
+  padding-bottom: 3rem;
+}
+
+.section-blog .row .col-lg-6 figure {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section-blog .row .col-lg-6 figure {
+    height: auto;
+  }
+}
+
+.section-blog .row .col-lg-6 figure span {
+  position: absolute;
+  bottom: 0;
+  float: right;
+  right: 0;
+  background-color: #8db500;
+  color: #fff;
+  z-index: 3;
+  font-size: 1.5rem;
+  padding: .8rem 2.5rem;
+}
+
+.section-blog .row .col-lg-6 figure img {
+  width: 100%;
+  height: 100%;
+  opacity: 1 !important;
+}
+
+.section-blog .row .col-lg-6 .info {
+  font-size: 1.3rem;
+  color: #6d6d6d;
+}
+
+.section-blog .row .col-lg-6 .title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  color: #100b2d;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section-blog .row .col-lg-6 .title {
+    font-size: 2rem;
+  }
+}
+
+.section-blog .row .col-lg-6 .text-blog {
+  font-size: 1.5rem;
+  color: #100b2d;
+  line-height: 1.7;
+  text-align: left;
+}
+/*# sourceMappingURL=main.css.map */

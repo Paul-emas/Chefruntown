@@ -1,0 +1,142 @@
+.header {
+
+    &_navbar {
+        height: 7rem;
+        background-color:  $color-primary;
+        width: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    
+    
+        & .navbar-content {
+            display: flex;
+            margin-top: 1.5rem;
+            justify-content: space-between;
+        }
+    
+        & .logo {
+            font-family: 'Dancing Script', cursive;
+            color: $color-white;
+            align-self: center;
+            font-size: 3rem;
+
+            @include respond(phone) {
+                font-size: 2.8rem;
+            }
+        }
+    
+        & .top-link {
+            color: $color-white;
+            font-size: 1.6rem;
+            margin-top: .5rem;
+            text-transform: capitalize;
+
+            @include respond(phone) {
+                font-size: 1.4rem;
+            }
+    
+            & ion-icon {
+                font-size: 2rem;
+                position: relative;
+                top: .3rem;
+            }
+        }
+    }
+    
+    .banner {
+        height: 52rem;
+        margin-top: 7rem;
+        background-repeat: no-repeat;
+
+        @include respond(phone) {
+            height: 30rem;
+        }
+
+        & .caption-text {
+            text-align: center;
+            position: relative;
+            top: 45%;
+            font-weight: 300;
+            transform: translateY(-50%);
+            font-size: 12rem;
+            color: #120C24;
+
+            &-h {
+                font-size: 7rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                top: 0;
+                transform: none;
+
+                @include respond(tab-port) {
+                    font-size: 6rem !important;
+                }
+
+                @include respond(phone) {
+                    font-size: 4rem !important;
+                }
+            }
+
+            @include respond(tab-port) {
+                font-size: 8rem;
+            }
+
+            @include respond(phone) {
+                font-size: 6rem;
+            }
+        }
+
+        &-blog {
+            background-image: url(https://res.cloudinary.com/dnjoewu0k/image/upload/v1593433758/Chefruntown/banner-blog_cbasbn.jpg);
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 3rem;
+                left: -11.5rem;
+                width: 25rem;
+                height: 25rem;
+                transform: scale(1.05);
+                background-size: 100%;
+                background-image: url(../img/blog/bg-0.png);
+                background-repeat: no-repeat;
+
+                @include respond(tab-port) {
+                    transform: scale(1);
+                }
+
+                @include respond(phone) {
+                    transform: scale(.6);
+                    top: -3rem;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -6rem;
+                right: -11.5rem;
+                width: 25rem;
+                height: 25rem;
+                transform: scale(1.1);
+                background-size: 100%;
+                background-image: url(../img/blog/bg-1.png);
+                background-repeat: no-repeat;
+
+                @include respond(tab-port) {
+                    transform: scale(1.05);
+                }
+
+                @include respond(phone) {
+                    transform: scale(.6);
+                    bottom: -10rem;
+                }
+            }
+        }
+    }
+}
