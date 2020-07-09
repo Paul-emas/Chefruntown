@@ -40,7 +40,7 @@ const clearLoader = () => {
 };
 
 getDOMStrings.search.addEventListener('keyup', (e) => {
-
+    e.preventDefault();
     const searchString = e.target.value;
     const searchData = [];
 
@@ -94,3 +94,4 @@ getDOMStrings.search.addEventListener('keyup', (e) => {
         clearLoader();
     }
 });
+
