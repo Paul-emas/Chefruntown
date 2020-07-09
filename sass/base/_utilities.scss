@@ -1,7 +1,7 @@
 .sec-padding {
     padding: 10rem 0;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         padding: 8rem 0;
     }
 

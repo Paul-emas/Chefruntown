@@ -33,7 +33,7 @@
                     height: 12.5vw;
                     margin-bottom: 2rem;
 
-                    @include respond(tab-port) {
+                    @include respond(tab-land) {
                         height: auto;
                         width: 100%;
                     }
