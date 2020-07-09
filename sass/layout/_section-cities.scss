@@ -1,4 +1,32 @@
 .section-cities {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 45rem;
+        height: 30rem;
+        top: -20rem;
+        left: -18rem;
+        background-image: url(https://res.cloudinary.com/dnjoewu0k/image/upload/v1594315287/Chefruntown/Layer_37_h4rqwp.png);
+        z-index: 2;
+        background-repeat: no-repeat;
+
+
+        @include respond(tab-land) {
+            transform: scale(.6);
+        }
+
+        @include respond(tab-port) {
+            transform: scale(.5);
+        }
+
+        @include respond(phone) {
+            transform: scale(.4);
+            top: -14rem;
+        }
+    } 
+
 
     & .col-lg-3 {
 

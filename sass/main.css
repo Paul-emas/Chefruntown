@@ -766,6 +766,44 @@ button {
   font-weight: 700;
 }
 
+.section-cities {
+  position: relative;
+}
+
+.section-cities::before {
+  position: absolute;
+  content: '';
+  width: 45rem;
+  height: 30rem;
+  top: -20rem;
+  left: -18rem;
+  background-image: url(https://res.cloudinary.com/dnjoewu0k/image/upload/v1594315287/Chefruntown/Layer_37_h4rqwp.png);
+  z-index: 2;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 75em) {
+  .section-cities::before {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section-cities::before {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-cities::before {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    top: -14rem;
+  }
+}
+
 .section-cities .col-lg-3 figure {
   height: 25rem;
   overflow: hidden;
