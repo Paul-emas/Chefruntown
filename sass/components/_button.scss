@@ -1,5 +1,5 @@
 .view {
-    padding: 1.2rem 4rem;
+    padding: 1.1rem 4.5rem;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -9,6 +9,11 @@
     outline-offset: 2px;
     transition: all .2s ease;
     border: none;
+
+    &-2 {
+        left: 0;
+        transform: translateX(0);
+    }
 
 
     & a {
